@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="GAPKHAO - Explore Thai Street Food Routes" />
+  <title>Explore | GAPKHAO</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Kanit:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <!-- Leaflet CSS for Interactive Map -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/explore-new.css" />
+  <link rel="stylesheet" href="css/language-switcher-cn.css" />
+</head>
+<body>
+
+  <!-- ========== NAVBAR ========== -->
+  <header class="navbar scrolled" id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="logo">
+        <span class="logo-fist">👊</span>
+        <span class="logo-text">GAPKHAO</span>
+      </a>
+      <nav class="nav-links" id="navLinks">
+        <a href="index.html" class="nav-link" data-translate="navbar.home">Home</a>
+        <a href="explore.html" class="nav-link nav-link--active" data-translate="navbar.explore">Explore</a>
+        <a href="street-food.html" class="nav-link" data-translate="navbar.streetFood">Street Food</a>
+        <a href="stories.html" class="nav-link" data-translate="navbar.stories">Stories</a>
+        <a href="blogs.html" class="nav-link" data-translate="navbar.blogs">Blogs</a>
+      </nav>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Language Switcher -->
+  <div class="language-switcher" id="languageSwitcher">
+    <button class="lang-btn active" data-lang="th">ไทย</button>
+    <button class="lang-btn" data-lang="zh">中文</button>
+  </div>
+
+  <main style="padding-top: 80px;">
+
+    <!-- ========== EXPLORE - NEW DESIGN ========== -->
+    <section class="explore-new-section">
+      
+      <!-- Left Sidebar -->
+      <aside class="explore-sidebar">
+        <!-- Search Bar -->
+        <div class="search-box">
+          <span class="search-icon">🔍</span>
+          <input type="text" placeholder="ค้นหาสถานที่..." id="searchInput" data-translate-placeholder="explore.searchPlaceholder" />
+        </div>
+
+        <!-- Location Cards -->
+        <div class="location-cards" id="locationCards">
+          
+          <div class="location-card" data-filter="food" data-lat="13.7563" data-lng="100.5018">
+            <div class="location-card-icon">🍜</div>
+            <div class="location-card-content">
+              <h3 class="location-card-title">ก๋วยจั๊บนายเอ็ก</h3>
+              <p class="location-card-area">เยาวราช 📍 3.9</p>
+              <p class="location-card-distance">กรุงเทพฯ · 3.9 km</p>
+            </div>
+            <div class="location-card-rating">⭐ 3.9</div>
+          </div>
+
+          <div class="location-card" data-filter="food" data-lat="13.7440" data-lng="100.5255">
+            <div class="location-card-icon">🍝</div>
+            <div class="location-card-content">
+              <h3 class="location-card-title">เปิดป่าพริกไทย</h3>
+              <p class="location-card-area">ท่าเตียน 📍 4.2</p>
+              <p class="location-card-distance">กรุงเทพฯ · 4.2 km</p>
+            </div>
+            <div class="location-card-rating">⭐ 4.2</div>
+          </div>
+
+          <div class="location-card" data-filter="food" data-lat="13.7308" data-lng="100.5214">
+            <div class="location-card-icon">🥘</div>
+            <div class="location-card-content">
+              <h3 class="location-card-title">ย่านสตรีทฟู้ด ตลาดน้อย</h3>
+              <p class="location-card-area">สตรีทฟู้ด 📍 4.5</p>
+              <p class="location-card-distance">กรุงเทพฯ · 4.5 km</p>
+            </div>
+            <div class="location-card-rating">⭐ 4.5</div>
+          </div>
+
+          <div class="location-card" data-filter="food" data-lat="13.7650" data-lng="100.5380">
+            <div class="location-card-icon">🥟</div>
+            <div class="location-card-content">
+              <h3 class="location-card-title">ติ่มซำจีนแท้</h3>
+              <p class="location-card-area">เยาวราช 📍 4.1</p>
+              <p class="location-card-distance">กรุงเทพฯ · 4.1 km</p>
+            </div>
+            <div class="location-card-rating">⭐ 4.1</div>
+          </div>
+
+          <!-- NEW LOCATIONS FROM STREET FOOD PAGE -->
+          <div class="location-card" data-filter="food" data-lat="13.7501" data-lng="100.5413">
+            <div class="location-card-icon">🍗</div>
+            <div class="location-card-content">
+              <h3 class="location-card-title">โกโก้ข้าวมันไก่ประตูน้ำ</h3>
+              <p class="location-card-area">ประตูน้ำ 📍 4.7</p>
+              <p class="location-card-distance">กรุงเทพฯ · 5.2 km</p>
+            </div>
+            <div class="location-card-rating">⭐ 4.7</div>
+          </div>
+
+          <div class="location-card" data-filter="food" data-lat="13.7237" data-lng="100.5173">
+            <div class="location-card-icon">🍛</div>
+            <div class="location-card-content">
+              <h3 class="location-card-title">เจริญแสงสีลม</h3>
+              <p class="location-card-area">สีลม 📍 4.5</p>
+              <p class="location-card-distance">กรุงเทพฯ · 3.8 km</p>
+            </div>
+            <div class="location-card-rating">⭐ 4.5</div>
+          </div>
+
+          <div class="location-card" data-filter="food" data-lat="13.7363" data-lng="100.5152">
+            <div class="location-card-icon">🥘</div>
+            <div class="location-card-content">
+              <h3 class="location-card-title">สีมรกต</h3>
+              <p class="location-card-area">สีมรกต 📍 4.6</p>
+              <p class="location-card-distance">กรุงเทพฯ · 4.3 km</p>
+            </div>
+            <div class="location-card-rating">⭐ 4.6</div>
+          </div>
+
+          <div class="location-card" data-filter="food" data-lat="13.7199" data-lng="100.5849">
+            <div class="location-card-icon">🌶️</div>
+            <div class="location-card-content">
+              <h3 class="location-card-title">เผ็ดมาก</h3>
+              <p class="location-card-area">เผ็ดมาก 📍 4.8</p>
+              <p class="location-card-distance">กรุงเทพฯ · 6.5 km</p>
+            </div>
+            <div class="location-card-rating">⭐ 4.8</div>
+          </div>
+
+          <div class="location-card" data-filter="food" data-lat="13.7202" data-lng="100.5161">
+            <div class="location-card-icon">🦆</div>
+            <div class="location-card-content">
+              <h3 class="location-card-title">ประจักษ์เป็ดย่าง</h3>
+              <p class="location-card-area">ประจักษ์เป็ดย่าง 📍 4.9</p>
+              <p class="location-card-distance">กรุงเทพฯ · 3.7 km</p>
+            </div>
+            <div class="location-card-rating">⭐ 4.9</div>
+          </div>
+
+          <div class="location-card" data-filter="food" data-lat="13.7593" data-lng="100.4984">
+            <div class="location-card-icon">🍲</div>
+            <div class="location-card-content">
+              <h3 class="location-card-title">ไอซา รสดี</h3>
+              <p class="location-card-area">ไอซา รสดี 📍 4.4</p>
+              <p class="location-card-distance">กรุงเทพฯ · 4.9 km</p>
+            </div>
+            <div class="location-card-rating">⭐ 4.4</div>
+          </div>
+
+          <div class="location-card" data-filter="food" data-lat="13.7466" data-lng="100.5097">
+            <div class="location-card-icon">🍛</div>
+            <div class="location-card-content">
+              <h3 class="location-card-title">ข้าวแกงเจ๊กปุ๋ย</h3>
+              <p class="location-card-area">ข้าวแกงเจ๊กปุ๋ย 📍 4.6</p>
+              <p class="location-card-distance">กรุงเทพฯ · 4.4 km</p>
+            </div>
+            <div class="location-card-rating">⭐ 4.6</div>
+          </div>
+
+          <div class="location-card" data-filter="food" data-lat="13.7344" data-lng="100.5284">
+            <div class="location-card-icon">🥣</div>
+            <div class="location-card-content">
+              <h3 class="location-card-title">โจ๊กสามย่าน</h3>
+              <p class="location-card-area">โจ๊กสามย่าน 📍 4.7</p>
+              <p class="location-card-distance">กรุงเทพฯ · 4.1 km</p>
+            </div>
+            <div class="location-card-rating">⭐ 4.7</div>
+          </div>
+
+          <div class="location-card" data-filter="food" data-lat="13.7335" data-lng="100.5458">
+            <div class="location-card-icon">🍗</div>
+            <div class="location-card-content">
+              <h3 class="location-card-title">ไก่ทอดเจ๊ฮี</h3>
+              <p class="location-card-area">ไก่ทอดเจ๊ฮี 📍 4.8</p>
+              <p class="location-card-distance">กรุงเทพฯ · 4.6 km</p>
+            </div>
+            <div class="location-card-rating">⭐ 4.8</div>
+          </div>
+
+          <div class="location-card" data-filter="food" data-lat="13.7543" data-lng="100.4986">
+            <div class="location-card-icon">🥧</div>
+            <div class="location-card-content">
+              <h3 class="location-card-title">ก พาย</h3>
+              <p class="location-card-area">ก พาย 📍 4.6</p>
+              <p class="location-card-distance">กรุงเทพฯ · 4.8 km</p>
+            </div>
+            <div class="location-card-rating">⭐ 4.6</div>
+          </div>
+
+          <div class="location-card" data-filter="food" data-lat="13.7534" data-lng="100.4991">
+            <div class="location-card-icon">🍡</div>
+            <div class="location-card-content">
+              <h3 class="location-card-title">บัวลอยเทคูเก้า</h3>
+              <p class="location-card-area">บัวลอยเทคูเก้า 📍 4.7</p>
+              <p class="location-card-distance">กรุงเทพฯ · 4.9 km</p>
+            </div>
+            <div class="location-card-rating">⭐ 4.7</div>
+          </div>
+
+          <div class="location-card" data-filter="food" data-lat="13.7531" data-lng="100.4975">
+            <div class="location-card-icon">🥞</div>
+            <div class="location-card-content">
+              <h3 class="location-card-title">ขนมเบื้องไทยขาวัง</h3>
+              <p class="location-card-area">แพร่งนรา 📍 4.8</p>
+              <p class="location-card-distance">กรุงเทพฯ · 4.7 km</p>
+            </div>
+            <div class="location-card-rating">⭐ 4.8</div>
+          </div>
+
+          <div class="location-card" data-filter="food" data-lat="13.7401" data-lng="100.5108">
+            <div class="location-card-icon">🥖</div>
+            <div class="location-card-content">
+              <h3 class="location-card-title">ปาท่องโก๋เสวย</h3>
+              <p class="location-card-area">เยาวราช 📍 4.9</p>
+              <p class="location-card-distance">กรุงเทพฯ · 4.2 km</p>
+            </div>
+            <div class="location-card-rating">⭐ 4.9</div>
+          </div>
+
+          <div class="location-card" data-filter="food" data-lat="13.7533" data-lng="100.5015">
+            <div class="location-card-icon">🥛</div>
+            <div class="location-card-content">
+              <h3 class="location-card-title">มนต์ นมสด</h3>
+              <p class="location-card-area">เสาชิงช้า 📍 4.7</p>
+              <p class="location-card-distance">กรุงเทพฯ · 4.9 km</p>
+            </div>
+            <div class="location-card-rating">⭐ 4.7</div>
+          </div>
+
+          <div class="location-card" data-filter="food" data-lat="13.7410" data-lng="100.5126">
+            <div class="location-card-icon">🍧</div>
+            <div class="location-card-content">
+              <h3 class="location-card-title">ลอดช่องสิงคโปร์</h3>
+              <p class="location-card-area">ลอดช่องสิงคโปร์ 📍 4.5</p>
+              <p class="location-card-distance">กรุงเทพฯ · 4.3 km</p>
+            </div>
+            <div class="location-card-rating">⭐ 4.5</div>
+          </div>
+
+          <div class="location-card" data-filter="food" data-lat="13.7258" data-lng="100.4925">
+            <div class="location-card-icon">🍨</div>
+            <div class="location-card-content">
+              <h3 class="location-card-title">ทับทิมกรอบวงเวียนใหญ่</h3>
+              <p class="location-card-area">วงเวียนใหญ่ 📍 4.8</p>
+              <p class="location-card-distance">กรุงเทพฯ · 3.5 km</p>
+            </div>
+            <div class="location-card-rating">⭐ 4.8</div>
+          </div>
+
+          <div class="location-card" data-filter="food" data-lat="13.7536" data-lng="100.4981">
+            <div class="location-card-icon">🍦</div>
+            <div class="location-card-content">
+              <h3 class="location-card-title">ณัฐพรไอศกรีม</h3>
+              <p class="location-card-area">ณัฐพรไอศกรีม 📍 4.6</p>
+              <p class="location-card-distance">กรุงเทพฯ · 4.9 km</p>
+            </div>
+            <div class="location-card-rating">⭐ 4.6</div>
+          </div>
+
+          <div class="location-card" data-filter="food" data-lat="13.7441" data-lng="100.5226">
+            <div class="location-card-icon">🍞</div>
+            <div class="location-card-content">
+              <h3 class="location-card-title">ปังนา</h3>
+              <p class="location-card-area">บรรทัดทอง 📍 4.7</p>
+              <p class="location-card-distance">กรุงเทพฯ · 4.0 km</p>
+            </div>
+            <div class="location-card-rating">⭐ 4.7</div>
+          </div>
+
+          <div class="location-card" data-filter="food" data-lat="13.7275" data-lng="100.5361">
+            <div class="location-card-icon">🍢</div>
+            <div class="location-card-content">
+              <h3 class="location-card-title">หมูปิ้งเจี๊ยบวัน</h3>
+              <p class="location-card-area">สีลม 📍 4.8</p>
+              <p class="location-card-distance">กรุงเทพฯ · 3.9 km</p>
+            </div>
+            <div class="location-card-rating">⭐ 4.8</div>
+          </div>
+
+          <div class="location-card" data-filter="food" data-lat="13.7535" data-lng="100.4981">
+            <div class="location-card-icon">🍡</div>
+            <div class="location-card-content">
+              <h3 class="location-card-title">ลูกชิ้นแพร่งนรา</h3>
+              <p class="location-card-area">แพร่งนรา 📍 4.6</p>
+              <p class="location-card-distance">กรุงเทพฯ · 4.9 km</p>
+            </div>
+            <div class="location-card-rating">⭐ 4.6</div>
+          </div>
+
+          <div class="location-card" data-filter="food" data-lat="13.7107" data-lng="100.5175">
+            <div class="location-card-icon">🍜</div>
+            <div class="location-card-content">
+              <h3 class="location-card-title">ก้วยจั๊บมีสเตอร์โอ</h3>
+              <p class="location-card-area">ก้วยจั๊บมีสเตอร์โอ 📍 4.7</p>
+              <p class="location-card-distance">กรุงเทพฯ · 3.6 km</p>
+            </div>
+            <div class="location-card-rating">⭐ 4.7</div>
+          </div>
+
+          <div class="location-card" data-filter="food" data-lat="13.7214" data-lng="100.4851">
+            <div class="location-card-icon">🥟</div>
+            <div class="location-card-content">
+              <h3 class="location-card-title">ถุยข่ายตลาดพลู</h3>
+              <p class="location-card-area">ตลาดพลู 📍 4.5</p>
+              <p class="location-card-distance">กรุงเทพฯ · 3.2 km</p>
+            </div>
+            <div class="location-card-rating">⭐ 4.5</div>
+          </div>
+
+          <div class="location-card" data-filter="food" data-lat="13.7408" data-lng="100.5110">
+            <div class="location-card-icon">🥠</div>
+            <div class="location-card-content">
+              <h3 class="location-card-title">น้องตาม & น้องเก๋า</h3>
+              <p class="location-card-area">เยาวราช 📍 4.8</p>
+              <p class="location-card-distance">กรุงเทพฯ · 4.2 km</p>
+            </div>
+            <div class="location-card-rating">⭐ 4.8</div>
+          </div>
+
+          <div class="location-card" data-filter="food" data-lat="13.7342" data-lng="100.5133">
+            <div class="location-card-icon">🥟</div>
+            <div class="location-card-content">
+              <h3 class="location-card-title">คุณนุ้ย กะหรี่ปั๊บ</h3>
+              <p class="location-card-area">คุณนุ้ย กะหรี่ปั๊บ 📍 4.9</p>
+              <p class="location-card-distance">กรุงเทพฯ · 4.1 km</p>
+            </div>
+            <div class="location-card-rating">⭐ 4.9</div>
+          </div>
+
+          <div class="location-card" data-filter="food" data-lat="13.7457" data-lng="100.5092">
+            <div class="location-card-icon">🥟</div>
+            <div class="location-card-content">
+              <h3 class="location-card-title">ขนมจีบเป๊ะเจี๊ยะ</h3>
+              <p class="location-card-area">ขนมจีบเป๊ะเจี๊ยะ 📍 4.7</p>
+              <p class="location-card-distance">กรุงเทพฯ · 4.5 km</p>
+            </div>
+            <div class="location-card-rating">⭐ 4.7</div>
+          </div>
+
+          <div class="location-card" data-filter="food" data-lat="13.7594" data-lng="100.5126">
+            <div class="location-card-icon">🍌</div>
+            <div class="location-card-content">
+              <h3 class="location-card-title">กล้วยทอดนางเล็ง</h3>
+              <p class="location-card-area">กล้วยทอดนางเล็ง 📍 4.6</p>
+              <p class="location-card-distance">กรุงเทพฯ · 5.1 km</p>
+            </div>
+            <div class="location-card-rating">⭐ 4.6</div>
+          </div>
+
+          <div class="location-card" data-filter="food" data-lat="13.7344" data-lng="100.5123">
+            <div class="location-card-icon">🥮</div>
+            <div class="location-card-content">
+              <h3 class="location-card-title">อังกู่</h3>
+              <p class="location-card-area">ตลาดน้อย 📍 4.8</p>
+              <p class="location-card-distance">กรุงเทพฯ · 4.1 km</p>
+            </div>
+            <div class="location-card-rating">⭐ 4.8</div>
+          </div>
+
+          <div class="location-card" data-filter="food" data-lat="13.7527" data-lng="100.5048">
+            <div class="location-card-icon">🍝</div>
+            <div class="location-card-content">
+              <h3 class="location-card-title">ทิพย์สมัย ผัดไทยประตูผี</h3>
+              <p class="location-card-area">ประตูผี 📍 4.9</p>
+              <p class="location-card-distance">กรุงเทพฯ · 4.8 km</p>
+            </div>
+            <div class="location-card-rating">⭐ 4.9</div>
+          </div>
+
+          <div class="location-card" data-filter="food" data-lat="13.7634" data-lng="100.5398">
+            <div class="location-card-icon">🍜</div>
+            <div class="location-card-content">
+              <h3 class="location-card-title">ต้อยถ้วยเคี้ยมเอื้อ</h3>
+              <p class="location-card-area">ต้อยถ้วยเคี้ยมเอื้อ 📍 4.7</p>
+              <p class="location-card-distance">กรุงเทพฯ · 5.3 km</p>
+            </div>
+            <div class="location-card-rating">⭐ 4.7</div>
+          </div>
+
+          <div class="location-card" data-filter="food" data-lat="13.7535" data-lng="100.5003">
+            <div class="location-card-icon">🍜</div>
+            <div class="location-card-content">
+              <h3 class="location-card-title">นายอ้วนเย็นตาโฟนะเค็ง</h3>
+              <p class="location-card-area">นะเค็ง 📍 4.8</p>
+              <p class="location-card-distance">กรุงเทพฯ · 4.9 km</p>
+            </div>
+            <div class="location-card-rating">⭐ 4.8</div>
+          </div>
+
+          <div class="location-card" data-filter="food" data-lat="13.7473" data-lng="100.5106">
+            <div class="location-card-icon">🍜</div>
+            <div class="location-card-content">
+              <h3 class="location-card-title">แฉลมถ้วยเคี้ยมคั่วไก่</h3>
+              <p class="location-card-area">แฉลมถ้วยเคี้ยม 📍 4.6</p>
+              <p class="location-card-distance">กรุงเทพฯ · 4.4 km</p>
+            </div>
+            <div class="location-card-rating">⭐ 4.6</div>
+          </div>
+
+          <div class="location-card" data-filter="food" data-lat="13.7536" data-lng="100.4993">
+            <div class="location-card-icon">🍝</div>
+            <div class="location-card-content">
+              <h3 class="location-card-title">ราดหน้าฮอฮกสูร 40 ปี</h3>
+              <p class="location-card-area">ฮอฮกสูร 📍 4.7</p>
+              <p class="location-card-distance">กรุงเทพฯ · 4.9 km</p>
+            </div>
+            <div class="location-card-rating">⭐ 4.7</div>
+          </div>
+
+          <div class="location-card" data-filter="food" data-lat="13.7246" data-lng="100.5779">
+            <div class="location-card-icon">🍜</div>
+            <div class="location-card-content">
+              <h3 class="location-card-title">นะหมี่คิ้วแซ่</h3>
+              <p class="location-card-area">ทองหล่อ 📍 4.8</p>
+              <p class="location-card-distance">กรุงเทพฯ · 6.2 km</p>
+            </div>
+            <div class="location-card-rating">⭐ 4.8</div>
+          </div>
+
+          <div class="location-card" data-filter="food" data-lat="13.7397" data-lng="100.5085">
+            <div class="location-card-icon">🍜</div>
+            <div class="location-card-content">
+              <h3 class="location-card-title">สี่แหล่งใหญ่</h3>
+              <p class="location-card-area">ทรงวาด 📍 4.7</p>
+              <p class="location-card-distance">กรุงเทพฯ · 4.2 km</p>
+            </div>
+            <div class="location-card-rating">⭐ 4.7</div>
+          </div>
+
+          <div class="location-card" data-filter="food" data-lat="13.7490" data-lng="100.5159">
+            <div class="location-card-icon">🍲</div>
+            <div class="location-card-content">
+              <h3 class="location-card-title">เฮลวีส สุกี้</h3>
+              <p class="location-card-area">ยศเส 📍 4.9</p>
+              <p class="location-card-distance">กรุงเทพฯ · 4.6 km</p>
+            </div>
+            <div class="location-card-rating">⭐ 4.9</div>
+          </div>
+
+          <div class="location-card" data-filter="food" data-lat="13.7410" data-lng="100.5094">
+            <div class="location-card-icon">🍜</div>
+            <div class="location-card-content">
+              <h3 class="location-card-title">ก๋วยจั๊บนายเอ็ก (เยาวราช)</h3>
+              <p class="location-card-area">เยาวราช 📍 4.8</p>
+              <p class="location-card-distance">กรุงเทพฯ · 4.2 km</p>
+            </div>
+            <div class="location-card-rating">⭐ 4.8</div>
+          </div>
+
+        </div>
+      </aside>
+
+      <!-- Right Map -->
+      <div class="explore-map-container">
+        <div id="map" class="map-full"></div>
+        
+        <!-- Location Detail Panel -->
+        <div class="location-detail-panel" id="locationDetailPanel">
+          <button class="detail-close-btn" id="closeDetailPanel" data-translate="explore.backBtn">← กลับ</button>
+          
+          <div class="detail-panel-content">
+            <div class="detail-header">
+              <div class="detail-icon" id="detailIcon">🍜</div>
+              <div class="detail-title-group">
+                <h2 class="detail-title" id="detailTitle">ก๋วยจั๊บนายเอ็ก</h2>
+                <p class="detail-subtitle" id="detailSubtitle">(Nai Ek Roll Noodle)</p>
+              </div>
+            </div>
+            
+            <div class="detail-meta-row">
+              <span class="detail-area" id="detailArea">เยาวราช</span>
+              <span class="detail-rating" id="detailRating">⭐ 3.9</span>
+            </div>
+            
+            <div class="detail-hours" id="detailHours">
+              เปิดอยู่จนถึง 23:59
+            </div>
+            
+            <div class="detail-section">
+              <h3 class="detail-section-title" data-translate="explore.addressTitle">ที่อยู่</h3>
+              <p class="detail-address" id="detailAddress">
+                ถนนเยาวราช (ปากซอยเยาวราช 9)<br>
+                อยู่ด้านซ้ายมือของถนนเยาวราช<br>
+                เยื้องๆกับโรงแรม Royal Hotel Bangkok
+              </p>
+            </div>
+            
+            <div class="detail-section">
+              <h3 class="detail-section-title" data-translate="explore.transportTitle">การเดินทาง</h3>
+              <div class="detail-transport">
+                <div class="transport-item">
+                  <span class="transport-icon">🚇</span>
+                  <span>200 ม. จาก MRT วัดมังกร</span>
+                </div>
+                <div class="transport-item">
+                  <span class="transport-icon">🚇</span>
+                  <span>800 ม. จาก MRT หัวลำโพง</span>
+                </div>
+              </div>
+            </div>
+            
+            <div class="detail-section">
+              <h3 class="detail-section-title"><span data-translate="explore.phoneTitle">เบอร์โทร</span> : <span id="detailPhone">022264651</span></h3>
+            </div>
+            
+            <div class="detail-images" id="detailImages">
+              <img src="https://images.unsplash.com/photo-1555126634-323283e090fa?w=400&q=80" alt="Food 1" />
+              <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=400&q=80" alt="Food 2" />
+              <img src="https://images.unsplash.com/photo-1562802378-063ec186a863?w=400&q=80" alt="Food 3" />
+              <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=400&q=80" alt="Food 4" />
+            </div>
+            
+            <button class="start-walking-btn" id="startWalkingBtn">
+              <span class="walking-icon">🚶</span>
+              <span class="walking-text" data-translate="explore.startWalking">เริ่มเดินทาง</span>
+              <span class="walking-arrow">→</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <a href="index.html" class="logo logo--light">
+          <span class="logo-fist">👊</span>
+          <span class="logo-text">GAPKHAO</span>
+        </a>
+        <p data-translate="footer.tagline">ทุกซอยคือเรื่องราวที่รอให้คุณค้นพบ ✨</p>
+      </div>
+
+      <nav class="footer-nav">
+        <div class="footer-col">
+          <h4 data-translate="footer.about">ABOUT</h4>
+          <a href="#" data-translate="footer.aboutUs">About us</a>
+          <a href="#" data-translate="footer.contact">Contact</a>
+        </div>
+        <div class="footer-col">
+          <h4 data-translate="footer.explore">EXPLORE</h4>
+          <a href="explore.html" data-translate="footer.route">Route</a>
+          <a href="street-life.html" data-translate="footer.streetLife">Street life</a>
+        </div>
+        <div class="footer-col">
+          <h4 data-translate="footer.stories">STORIES</h4>
+          <a href="stories.html" data-translate="footer.video">Video</a>
+          <a href="blogs.html" data-translate="footer.blog">Blog</a>
+        </div>
+      </nav>
+    </div>
+    <div class="footer-bottom">
+      <p data-translate="footer.copyright">© 2026 GAPKHAO · All Rights Reserved</p>
+    </div>
+  </footer>
+
+  <!-- Toast notification -->
+  <div class="toast" id="toast"></div>
+
+  <!-- Leaflet JS for Interactive Map -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/explore-new.js"></script>
+  <script src="js/language-switcher-cn.js"></script>
+</body>
+</html>
