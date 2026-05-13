@@ -102,6 +102,21 @@ const translations = {
     'footer.blog': 'Blog',
     'footer.copyright': '© 2026 GAPKHAO · All Rights Reserved',
     
+    // Contact Page - Keep original Thai
+    'contact-title': 'ติดต่อเรา',
+    'contact-subtitle': 'เราพร้อมรับฟังความคิดเห็นและข้อเสนอแนะจากคุณ',
+    'contact-phone-label': 'โทร',
+    'contact-email-label': 'อีเมล',
+    'contact-about-title': 'เกี่ยวกับ GAPKHAO',
+    'contact-about-text': 'GAPKHAO เป็นแพลตฟอร์มที่รวบรวมวัฒนธรรมอาหารไทยและชีวิตริมถนน เราต้องการแบ่งปันเรื่องราวของอาหารไทยแท้ๆ และสถานที่น่าสนใจในกรุงเทพฯ ให้กับทุกคนได้สัมผัสและเรียนรู้',
+    'contact-feedback-title': 'ข้อเสนอแนะ',
+    'contact-feedback-text': 'หากคุณมีร้านอาหารดีๆ หรือสถานที่น่าสนใจที่อยากแนะนำ หรือมีความคิดเห็นเกี่ยวกับเว็บไซต์ของเรา สามารถติดต่อมาได้ตามช่องทางด้านบน',
+    'footer-description': 'ค้นพบวัฒนธรรมอาหารไทยและชีวิตริมถนนผ่านเรื่องราวและสถานที่น่าสนใจ',
+    'footer-explore': 'สำรวจ',
+    'footer-contact': 'ติดต่อเรา',
+    'footer-contact-page': 'หน้าติดต่อ',
+    'footer-rights': 'สงวนลิขสิทธิ์',
+    
     // Street Food Page - Keep original English
     'streetFood.eyebrow': 'ร้านค้าแนะนำ',
     'streetFood.title': 'Street Food',
@@ -241,6 +256,21 @@ const translations = {
     'footer.video': '视频',
     'footer.blog': '博客',
     'footer.copyright': '© 2026 GAPKHAO · 版权所有',
+    
+    // Contact Page
+    'contact-title': '联系我们',
+    'contact-subtitle': '我们随时准备倾听您的意见和建议',
+    'contact-phone-label': '电话',
+    'contact-email-label': '邮箱',
+    'contact-about-title': '关于 GAPKHAO',
+    'contact-about-text': 'GAPKHAO 是一个汇集泰国美食文化和街头生活的平台。我们希望与大家分享正宗泰国美食的故事和曼谷有趣的地方，让每个人都能体验和学习。',
+    'contact-feedback-title': '建议反馈',
+    'contact-feedback-text': '如果您有好的餐厅或有趣的地方想要推荐，或者对我们的网站有任何意见，可以通过上述渠道联系我们。',
+    'footer-description': '通过故事和有趣的地方发现泰国美食文化和街头生活',
+    'footer-explore': '探索',
+    'footer-contact': '联系我们',
+    'footer-contact-page': '联系页面',
+    'footer-rights': '版权所有',
     
     // Street Food Page
     'streetFood.eyebrow': '推荐店铺',
