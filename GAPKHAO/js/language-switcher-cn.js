@@ -65,17 +65,28 @@ const translations = {
     'recommend.place2.meta': 'ท่าเตียน · ⭐ 4.2',
     'recommend.place3.name': 'ย่านสตรีทฟู้ด ตลาดน้อย',
     'recommend.place3.meta': 'สตรีทฟู้ด · ⭐ 4.5',
-    'recommend.place4.name': 'วัดระเบียบ',
-    'recommend.place4.meta': 'ธนบุรี · ⭐ 4.8',
-    'recommend.place5.name': 'ติ่มซำจีนแท้',
-    'recommend.place5.meta': 'เยาวราช · ⭐ 4.1',
-    'recommend.place6.name': 'Street Art Gallery',
-    'recommend.place6.meta': 'เจริญกรุง · ⭐ 4.6',
+    'recommend.place4.name': 'ติ่มซำจีนแท้',
+    'recommend.place4.meta': 'เยาวราช · ⭐ 4.1',
+    'recommend.place5.name': 'โกโก้ข้าวมันไก่ประตูน้ำ',
+    'recommend.place5.meta': 'ประตูน้ำ · ⭐ 4.7',
+    'recommend.place6.name': 'ก๋วยเตี๋ยวเรือวัดระเบียบ',
+    'recommend.place6.meta': 'ธนบุรี · ⭐ 4.6',
     
     // Community - Keep original English
     'community.label': 'Community',
     'community.title': 'Voice of the Street',
-    'community.subtitle': 'Memory Wall',
+    'community.subtitle': '6 เสียงของ Street Food',
+    
+    // Stories
+    'stories.resilience': 'Voice of Resilience',
+    'stories.accessibility': 'Voice of Accessibility',
+    'stories.heritage': 'Voice of Heritage',
+    'stories.fusion': 'Voice of Fusion',
+    'stories.innovation': 'Voice of Innovation',
+    'stories.global': 'Voice of Global Citizen',
+    
+    // Sources
+    'sources.title': 'ขอบคุณข้อมูลจาก',
     
     // Footer - Keep original English
     'footer.tagline': 'ทุกซอยคือเรื่องราวที่รอให้คุณค้นพบ ✨',
@@ -95,6 +106,8 @@ const translations = {
     'streetFood.eyebrow': 'ร้านค้าแนะนำ',
     'streetFood.title': 'Street Food',
     'streetFood.subtitle': 'สัมผัสอัตลักษณ์อาหารไทย วัฒนธรรม และศิลปะที่ซ่อนอยู่ในทุกมุมถนน',
+    'category.main': 'อาหารจานหลัก',
+    'category.dessert': 'ของหวาน',
     'category.main': 'อาหารจานหลัก',
     'category.dessert': 'ของหวาน',
     'category.snack': 'ของกินเล่น',
@@ -192,17 +205,28 @@ const translations = {
     'recommend.place2.meta': '塔田 · ⭐ 4.2',
     'recommend.place3.name': '塔拉诺街头美食区',
     'recommend.place3.meta': '街头美食 · ⭐ 4.5',
-    'recommend.place4.name': '拉康寺',
-    'recommend.place4.meta': '吞武里 · ⭐ 4.8',
-    'recommend.place5.name': '正宗中式点心',
-    'recommend.place5.meta': '耀华力 · ⭐ 4.1',
-    'recommend.place6.name': '街头艺术画廊',
-    'recommend.place6.meta': '石龙军 · ⭐ 4.6',
+    'recommend.place4.name': '正宗中式点心',
+    'recommend.place4.meta': '耀华力 · ⭐ 4.1',
+    'recommend.place5.name': '海南鸡饭',
+    'recommend.place5.meta': '水门 · ⭐ 4.7',
+    'recommend.place6.name': '拉康寺船面',
+    'recommend.place6.meta': '吞武里 · ⭐ 4.6',
     
     // Community
     'community.label': '社区',
     'community.title': '街头之声',
-    'community.subtitle': '记忆墙',
+    'community.subtitle': '街头美食的6种声音',
+    
+    // Stories
+    'stories.resilience': '韧性之声',
+    'stories.accessibility': '可及性之声',
+    'stories.heritage': '传承之声',
+    'stories.fusion': '融合之声',
+    'stories.innovation': '创新之声',
+    'stories.global': '全球公民之声',
+    
+    // Sources
+    'sources.title': '感谢数据来源',
     
     // Footer
     'footer.tagline': '每条小巷都有等待您发现的故事 ✨',

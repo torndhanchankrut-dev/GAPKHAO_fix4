@@ -878,8 +878,8 @@
         </div>
         
         <div class="location-modal-actions">
-          <button class="location-modal-btn location-modal-btn-primary" onclick="openGoogleMaps(${food.lat}, ${food.lng}, '${name}')">
-            ${currentLang === 'zh' ? '在 Google 地图中打开 →' : 'เปิดใน Google Maps →'}
+          <button class="location-modal-btn location-modal-btn-primary" onclick="goToExplore(${food.lat}, ${food.lng})">
+            ${currentLang === 'zh' ? '在探索页面查看 →' : 'ดูในหน้า Explore →'}
           </button>
           <button class="location-modal-btn location-modal-btn-secondary" onclick="closeLocationModal()">
             ${currentLang === 'zh' ? '关闭' : 'ปิด'}
@@ -899,10 +899,15 @@
     document.body.style.overflow = '';
   };
 
-  // Open Google Maps
-  window.openGoogleMaps = function(lat, lng, name) {
-    const url = `https://www.google.com/maps/search/?api=1&query=${lat},${lng}&query_place_id=${encodeURIComponent(name)}`;
-    window.open(url, '_blank');
+  // Go to Explore page with location
+  window.goToExplore = function(lat, lng) {
+    // Find the matching location in explore page by coordinates
+    // Store the coordinates in sessionStorage to pre-select on explore page
+    sessionStorage.setItem('exploreLocationLat', lat);
+    sessionStorage.setItem('exploreLocationLng', lng);
+    
+    // Redirect to explore page
+    window.location.href = 'explore.html';
   };
 
   // Setup modal handlers

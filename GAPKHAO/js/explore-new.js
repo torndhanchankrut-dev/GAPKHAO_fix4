@@ -1460,8 +1460,35 @@ document.addEventListener('DOMContentLoaded', () => {
   // Close panel button
   document.getElementById('closeDetailPanel').addEventListener('click', closeDetailPanel);
   
-  // Select first location by default
-  setTimeout(() => {
-    selectLocation(0);
-  }, 500);
+  // Check if coming from Street Food page
+  const lat = sessionStorage.getItem('exploreLocationLat');
+  const lng = sessionStorage.getItem('exploreLocationLng');
+  
+  if (lat && lng) {
+    // Find matching location by coordinates
+    const matchingIndex = locationsData.findIndex(loc => 
+      Math.abs(loc.lat - parseFloat(lat)) < 0.0001 && 
+      Math.abs(loc.lng - parseFloat(lng)) < 0.0001
+    );
+    
+    if (matchingIndex !== -1) {
+      setTimeout(() => {
+        selectLocation(matchingIndex);
+      }, 500);
+    } else {
+      // If no exact match, select first location
+      setTimeout(() => {
+        selectLocation(0);
+      }, 500);
+    }
+    
+    // Clear sessionStorage
+    sessionStorage.removeItem('exploreLocationLat');
+    sessionStorage.removeItem('exploreLocationLng');
+  } else {
+    // Select first location by default
+    setTimeout(() => {
+      selectLocation(0);
+    }, 500);
+  }
 });

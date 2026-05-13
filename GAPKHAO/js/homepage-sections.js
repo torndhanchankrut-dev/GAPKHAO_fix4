@@ -219,3 +219,39 @@
   document.head.appendChild(style);
 
 })();
+
+
+// ══════════════════════════════════════════════════════════════
+// RECOMMEND PLACES - Navigate to Explore Page with Location
+// ══════════════════════════════════════════════════════════════
+
+document.addEventListener('DOMContentLoaded', () => {
+  const placeItems = document.querySelectorAll('.place-item');
+  
+  // Map place IDs to location data from explore page
+  const placeLocations = {
+    '1': { lat: 13.7563, lng: 100.5018 }, // ก๋วยจั๊บนายเอ็ก
+    '2': { lat: 13.7440, lng: 100.5255 }, // เปิดป่าพริกไทย
+    '3': { lat: 13.7308, lng: 100.5214 }, // ย่านสตรีทฟู้ด ตลาดน้อย
+    '4': { lat: 13.7650, lng: 100.5380 }, // ติ่มซำจีนแท้
+    '5': { lat: 13.7501, lng: 100.5413 }, // โกโก้ข้าวมันไก่ประตูน้ำ
+    '6': { lat: 13.7289, lng: 100.4877 }  // ก๋วยเตี๋ยวเรือวัดระเบียบ
+  };
+  
+  placeItems.forEach(item => {
+    item.addEventListener('click', (e) => {
+      e.preventDefault();
+      const placeId = item.getAttribute('data-place-id');
+      const location = placeLocations[placeId];
+      
+      if (location) {
+        // Store GPS coordinates in sessionStorage
+        sessionStorage.setItem('exploreLocationLat', location.lat);
+        sessionStorage.setItem('exploreLocationLng', location.lng);
+        
+        // Navigate to explore page
+        window.location.href = 'explore.html';
+      }
+    });
+  });
+});
