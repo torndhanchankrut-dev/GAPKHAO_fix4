@@ -17,7 +17,7 @@ const blogsData = [
     dateZh: '2026年1月12日',
     readTime: '8 min read',
     readTimeZh: '8分钟阅读',
-    image: 'https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=800&q=80',
+    image: 'https://img.wongnai.com/p/1920x0/2017/04/17/683fa846fc3c40ca89348cca7b4f5926.jpg',
     excerpt: 'ย่านไชน่าทาวน์ที่ใหญ่ที่สุดในโลก และนี่คือ 10 เมนูระดับตำนานที่ถ้าไม่กินถือว่ามาไม่ถึง',
     excerptZh: '世界上最大的唐人街，这里有10道传奇美食，不吃等于没来过',
     content: `
@@ -69,6 +69,7 @@ const blogsData = [
         <ul>
           <li><a href="https://th.trip.com/travel-guide/bangkok/yaowarat-road-78217/" target="_blank">รวมร้านเด็ดและวิธีเดินทางปี 2026 - Trip.com</a> (ข้อมูล MRT วัดมังกร และร้านในตำนาน)</li>
           <li><a href="https://guide.michelin.com/th/th/bangkok-region/bangkok/restaurants" target="_blank">Guide ร้าน Michelin ในเยาวราช - Michelin Guide</a></li>
+          <li><a href="https://www.wongnai.com/listings/street-food-lineman" target="_blank">Wongnai - Street Food Lineman</a></li>
         </ul>
       </div>
     `,
@@ -132,7 +133,7 @@ const blogsData = [
     dateZh: '2026年1月10日',
     readTime: '7 min read',
     readTimeZh: '7分钟阅读',
-    image: 'https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80',
+    image: 'https://i.ytimg.com/vi/q6EX5pfss1g/maxresdefault.jpg',
     excerpt: 'ย่านที่ขึ้นชื่อเรื่องความชิค แต่ซ่อนร้านเด็ดราคาเป็นกันเองไว้เพียบ',
     excerptZh: '以时尚著称的街区，却隐藏着许多价格亲民的美味餐厅',
     content: `
@@ -211,7 +212,7 @@ blogsData.push(
     dateZh: '2026年1月8日',
     readTime: '6 min read',
     readTimeZh: '6分钟阅读',
-    image: 'https://images.unsplash.com/photo-1499781350541-7783f6c6a0c8?w=800&q=80',
+    image: 'https://s.isanook.com/tr/0/ud/195/978241/13-7-2555_15-40-48.jpg',
     excerpt: 'ย่านที่คนลาดพร้าวรู้ดีว่า "ไม่มีวันอดตาย" เพราะของกินเยอะตลอด 24 ชั่วโมง',
     excerptZh: '拉差帕劳人都知道这里"永远不会饿死"，因为24小时都有美食',
     content: `
@@ -239,6 +240,7 @@ blogsData.push(
         <h4>📚 อ้างอิง</h4>
         <ul>
           <li><a href="https://www.wongnai.com/trips/chok-chai-4-restaurants" target="_blank">Wongnai - รวมร้านเด็ดโชคชัย 4</a></li>
+          <li><a href="https://www.youtube.com/watch?v=mqwnp8a1dpA" target="_blank">YouTube - ตลาดโชคชัย 4</a></li>
         </ul>
       </div>
     `,
@@ -286,7 +288,7 @@ blogsData.push(
     dateZh: '2026年1月6日',
     readTime: '7 min read',
     readTimeZh: '7分钟阅读',
-    image: 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=800&q=80',
     excerpt: 'ย่านเก่าแก่ที่เต็มไปด้วยคนไทยเชื้อสายจีน ขนมและอาหารที่นี่จึงมีเอกลักษณ์',
     excerptZh: '充满泰籍华人的古老街区，这里的糕点和食物都有独特的特色',
     content: `
@@ -314,6 +316,7 @@ blogsData.push(
         <h4>📚 อ้างอิง</h4>
         <ul>
           <li><a href="https://www.timeout.com/bangkok/restaurants/soi-st-louis-food-guide" target="_blank">Time Out Bangkok - Soi St. Louis Food Guide</a></li>
+          <li><a href="https://www.youtube.com/watch?v=o5LT62MkYDg" target="_blank">YouTube - เซนต์หลุยส์</a></li>
         </ul>
       </div>
     `,
@@ -351,78 +354,115 @@ blogsData.push(
   },
   {
     id: 'tha-phra-chan-tha-chang',
-    title: 'ท่าพระจันทร์-ท่าช้าง: รสชาติแห่งประวัติศาสตร์ริมน้ำ 🛶',
-    titleZh: '塔帕占-塔昌：河边的历史风味 🛶',
-    area: 'ท่าพระจันทร์-ท่าช้าง',
-    areaZh: '塔帕占-塔昌',
+    title: '7 ร้านริมน้ำย่านท่ามหาราช ท่าช้าง วิวดี อาหารเลิศ! 🌊',
+    titleZh: '7家塔玛哈拉-塔昌河畔餐厅 美景美食！🌊',
+    area: 'ท่ามหาราช-ท่าช้าง',
+    areaZh: '塔玛哈拉-塔昌',
     author: 'อินทิรา',
     authorZh: '茵提拉',
     date: '4 Jan 2026',
     dateZh: '2026年1月4日',
     readTime: '8 min read',
     readTimeZh: '8分钟阅读',
-    image: 'https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=800&q=80',
-    excerpt: 'แหล่งรวมร้านอาหารที่อยู่คู่กับนักศึกษาธรรมศาสตร์และศิลปากรมาหลายทศวรรษ',
-    excerptZh: '几十年来与法政大学和艺术大学学生相伴的餐厅聚集地',
+    image: 'https://img.wongnai.com/p/1920x0/2018/04/17/c8aa7bfc690c448b83c86dd6de03e351.jpg',
+    excerpt: '7 ร้านริมน้ำย่านท่ามหาราช-ท่าช้าง วิวแม่น้ำเจ้าพระยาสวยงาม อาหารอร่อย บรรยากาศดีเยี่ยม',
+    excerptZh: '7家塔玛哈拉-塔昌河畔餐厅，湄南河美景，美食，绝佳氛围',
     content: `
-      <h3>ย่านริมน้ำเจ้าพระยา</h3>
-      <p>ท่าพระจันทร์-ท่าช้างเป็นย่านที่มีประวัติศาสตร์ยาวนาน ตั้งอยู่ริมแม่น้ำเจ้าพระยา มีร้านอาหารที่อยู่คู่กับนักศึกษามาหลายรุ่น</p>
-      
-      <h4>โรตีหน้าเพาะช่าง</h4>
-      <p>โรตีที่มีชื่อเสียงมากว่า 40 ปี แป้งบางกรอบ ไส้เยอะ มีทั้งรสหวานและรสคาว เป็นที่นิยมของนักศึกษาและคนทำงานในย่าน</p>
-      
-      <h4>อรทัย ซูชิวังหลัง (ข้ามฟากไปนิด)</h4>
-      <p>ร้านซูชิสไตล์ไทยที่มีรสชาติเป็นเอกลักษณ์ ราคาไม่แพง คุณภาพดี เป็นที่นิยมของคนในย่าน</p>
-      
-      <h4>ร้านมิตรโกหย่วน อาหารกุ๊กช็อปยุคแรก</h4>
-      <p>ร้านอาหารจีนโบราณที่เปิดมานานกว่า 60 ปี มีเมนูอาหารจีนต้นตำรับ รสชาติกลมกล่อม บรรยากาศแบบดั้งเดิม</p>
-      
+      <h3>ร้านริมน้ำย่านท่ามหาราช-ท่าช้าง</h3>
+      <p>ย่านท่ามหาราชและท่าช้างเป็นหนึ่งในย่านริมน้ำที่สวยงามที่สุดของกรุงเทพฯ มีร้านอาหารหลากหลายสไตล์ ทั้งอาหารไทย อาหารทะเล และร้านกาแฟ ล้วนมีวิวแม่น้ำเจ้าพระยาที่งดงาม</p>
+
+      <h4>🍽️ เสวยท่ามหาราช ⭐ 3.9 (105 รีวิว)</h4>
+      <p><em>อาหารไทย, อาหารตามสั่ง</em></p>
+      <p>ร้านเสวยสาขานี้อยู่ที่ชั้นสองท่ามหาราช ขึ้นไปชั้นสองมีทั้งโซนห้องแอร์และด้านนอกเป็นร้านอาหารริมน้ำ เห็นวิวสวย ๆ มากันหลายคน สั่งอาหารดังนี้ครับ ทอดมันกุ้ง ชิ้นเหลืองทอง น่ากิน รสชาติดี กุ้งเป็นกุ้ง กินน้ำจิ้มบ๊วย กินกับข้าวสวย ลงตัวดี ปลากะพงทอดน้ำปลา ปลาตัวขนาดกลาง ๆ ทอดมากรอบนอกนุ่มใน ปลาสด น้ำราดเด็ดมาก รสชาติดีครับ</p>
+      <p class="blog-review-author">— รีวิวโดยคุณ Xx_YoS_xX</p>
+
+      <h4>🦐 ครัวคุณกุ้งท่าช้าง ⭐ 4.0 (74 รีวิว)</h4>
+      <p><em>อาหารทะเล, อาหารไทย, ร้านริมน้ำ</em></p>
+      <p>ร้านอาหารริมน้ำนี้อยู่ท่าช้าง นั่งเรือข้ามจากวังหลัง-ศิราชมาก็ถึงเลย เป็นร้านริมน้ำที่ดูเรียบง่าย แต่คุณภาพระดับภัตตาคาร อาหารทะเลที่นี่สดมาก อาหารรสชาติกลมกล่อม ถูกปาก ข้าวสวยก็คุณภาพดี หอม นุ่ม น่ากินค่ะ ราคาถือว่าเล็กไปเลยถ้าเทียบคุณภาพ บรรยากาศร้านดีเหมือนร้านอาหารในโรงแรมหรู ๆ มีดนตรีเล่นสดคลอไป อาหารที่แนะนำคือ ปลากะพงนึ่งมะนาว อันนี้ให้ 10 ดาว ชอบมากค่ะ เสิร์ฟร้อนแบบหม้อไฟ ปลาสดมากรสชาติกลมกล่อม หอมมะนาวชัด รสชาติน้ำยำซึมไปถึงข้างในเนื้อปลาเลยค่ะ</p>
+      <p class="blog-review-author">— รีวิวโดยคุณ น้องถั่วพากิน</p>
+
+      <h4>🧋 เฉาก๊วยตาตั้มท่ามหาราช ⭐ 3.8 (18 รีวิว)</h4>
+      <p><em>ของหวาน</em></p>
+      <p>ร้านอยู่ริมแม่น้ำ ตรงท่ามหาราชใกล้กับร้านอาหารริมน้ำอย่างร้านรสนิยม เนื้อเฉาก๊วยเด้งแบบเยลลีและนุ่มเคี้ยวเพลินดี ได้รสชาติเฉาก๊วยแบบเข้ม ๆ หน่อย มีรสหวานในตัว ซึ่งก็ไม่หวานมากจนกินเปล่า ๆ ไม่ได้ ใครที่ไม่ชอบกินเฉาก๊วยน้ำเชื่อมปกติก็มีเป็นแบบเฉาก๊วยชานม เฉาก๊วยนมสดด้วย ใส่มาในถ้วยและแก้วที่ถือสะดวกมีช้อนมาให้เปิดกินเดินกินได้เลย</p>
+      <p class="blog-review-author">— รีวิวโดยคุณ Yee_Sunee</p>
+
+      <h4>🦞 Lobster Bucket (BBQ Grilled Cheese) ท่ามหาราช ⭐ 2.2 (4 รีวิว)</h4>
+      <p><em>ฟาสต์ฟู้ด/จานด่วน, หมูกระทะ</em></p>
+      <p>เป็นร้านปิ้งย่าง จุ่มชีสที่เสิร์ฟมาแบบชีสรอบกระทะ มาเลยครับใครชอบกินปิ้งย่างร้านสวย ๆ บรรยากาศดี ๆ ริมแม่น้ำ ชิลล์มาก แถมใครเป็นสาวกชีสเยิ้ม ๆ ต้องไม่พลาดร้านนี้ที่อยู่ชั้นล่างของท่ามหาราช โดยรวมแล้วกินได้ 2 ชั่วโมง รสชาติดีถูกปากเลยครับ เตาของที่นี่เราเร่งไฟได้เองเลย กระทะร้อนเร็ว อาหารสุกไวมาก ชีสเยอะสะใจ เป็นร้านอาหารริมน้ำที่เลิศเวอร์</p>
+      <p class="blog-review-author">— รีวิวโดยคุณ niki。。。にき</p>
+
+      <h4>🥩 On The Grill (2 รีวิว)</h4>
+      <p><em>ปิ้งย่าง</em></p>
+      <p>ร้านอยู่ชั้น 3 ท่ามหาราช ถ้าไม่สังเกตดี ๆ ก็ไม่รู้ว่ามีชั้น 3 ด้วย ร้านเป็นร้านอาหารริมน้ำเลย มีวิวแม่น้ำให้นั่งดูเพลิน ๆ ลมพัดเย็น ๆ ที่นี่มีพวกเมนูสเต๊กให้สั่งมานั่งกินกัน มีเครื่องดื่มหลากหลายให้เลือกด้วยค่ะ สั่งสเต๊กมาก็รสชาติดีเลยค่ะ นั่งกินไปเพลิน ๆ คุยกับเพื่อนด้วย ชมวิวด้วย ยิ่งช่วงเย็น ๆ นี่เรียกได้ว่าบรรยากาศดีสุดยอด ใครที่หาร้านนั่งชิลล์ ๆ ที่ท่ามหาราชก็ลองมานั่งร้านนี้ดูได้ค่ะ</p>
+      <p class="blog-review-author">— รีวิวโดยคุณ Timmiie Kukiatpaisal</p>
+
+      <h4>☕ Navy Club Coffee ⭐ 3.0 (1 รีวิว)</h4>
+      <p><em>ร้านกาแฟ/ชา</em></p>
+      <p>ถัดมาจากท่าช้าง ภายในราชนาวีสโมสรมีร้านนี้เป็นซุ้มหลังเล็ก ๆ ขายเครื่องดื่มอยู่ อยู่ริมแม่น้ำเจ้าพระยา หากเดินเข้ามาภายในก็เห็นได้ไม่ยาก ที่ร้านริมน้ำขายเครื่องดื่มต่าง ๆ เช่น กาแฟ ชา และอิตาเลียนโซดา วันนี้ผมลองสั่ง Navy Blue Soda มันคือบลูฮาวายผสมโซดา หวานอมเปรี้ยว ไม่เข้มเกินไป โดยรวมเป็นอิตาเลียนโซดาที่รสชาติดีครับ วิวร้านนี้สวยมาก ยิ่งตอนเย็น ๆ แล้วยิ่งสวยเลย</p>
+      <p class="blog-review-author">— รีวิวโดยคุณ Best SiLenZ</p>
+
       <div class="blog-highlight">
         <h4>🌊 The Vibe</h4>
-        <p>กลิ่นอายริมน้ำเจ้าพระยาและตึกแถวโบราณ บรรยากาศสบายๆ เหมาะสำหรับเดินเล่นและนั่งชิลล์ริมน้ำ</p>
+        <p>วิวแม่น้ำเจ้าพระยาสวยงาม บรรยากาศริมน้ำที่ผ่อนคลาย เหมาะสำหรับมื้อเย็นพิเศษหรือนั่งชิลล์ยามเย็น ลมพัดเย็นสบาย ดนตรีสดคลอเบา ๆ</p>
       </div>
-      
-      <h4>การเดินทาง</h4>
-      <p>ใกล้ท่าเรือพระจันทร์ สามารถเดินทางโดยเรือโดยสารหรือรถเมล์ มีบรรยากาศริมน้ำที่สวยงาม</p>
-      
+
       <div class="blog-references">
         <h4>📚 อ้างอิง</h4>
         <ul>
-          <li><a href="https://www.thecloud.co.th/tha-phra-chan-memory" target="_blank">The Cloud - ท่าพระจันทร์ในความทรงจำ</a></li>
+          <li>รีวิวจากผู้ใช้จริงในย่านท่ามหาราช-ท่าช้าง</li>
+          <li><a href="https://www.wongnai.com/listings/riverside-resturaunts-at-tha-maharaj-and-tha-chang" target="_blank">Wongnai - 7 ร้านริมน้ำท่ามหาราช ท่าช้าง</a></li>
         </ul>
       </div>
     `,
     contentZh: `
-      <h3>湄南河畔街区</h3>
-      <p>塔帕占-塔昌是一个历史悠久的街区，位于湄南河畔，有许多陪伴学生多代的餐厅。</p>
-      
-      <h4>培昌煎饼</h4>
-      <p>超过40年历史的著名煎饼，皮薄脆，馅料多，有甜味和咸味，深受学生和上班族欢迎。</p>
-      
-      <h4>阿泰王朗寿司（过河一点）</h4>
-      <p>泰式寿司店，味道独特，价格不贵，质量好，深受当地人欢迎。</p>
-      
-      <h4>米特果园 早期厨师餐厅</h4>
-      <p>开业超过60年的古老中餐厅，有正宗的中国菜，味道圆润，传统氛围。</p>
-      
+      <h3>塔玛哈拉-塔昌河畔餐厅</h3>
+      <p>塔玛哈拉和塔昌地区是曼谷最美丽的河畔区域之一，拥有各种风格的餐厅，包括泰国菜、海鲜和咖啡馆，都能欣赏到美丽的湄南河景色。</p>
+
+      <h4>🍽️ 塔玛哈拉沙威餐厅 ⭐ 3.9 (105条评论)</h4>
+      <p><em>泰国菜，快餐</em></p>
+      <p>这家沙威分店位于塔玛哈拉二楼，二楼有空调区和户外河畔餐厅，景色优美。推荐菜品：炸虾饼，金黄色，好看又好吃，虾肉饱满，配梅子酱和白饭，搭配完美。炸鱼露鲈鱼，中等大小，外酥内嫩，鱼肉新鲜，浇汁非常棒，味道很好。</p>
+      <p class="blog-review-author">— 评论来自 Xx_YoS_xX</p>
+
+      <h4>🦐 塔昌虾厨房 ⭐ 4.0 (74条评论)</h4>
+      <p><em>海鲜，泰国菜，河畔餐厅</em></p>
+      <p>这家河畔餐厅位于塔昌，从王朗-西拉乘船过来即可到达。餐厅看起来简单，但质量达到餐厅级别。这里的海鲜非常新鲜，食物味道圆润，合口味。白饭质量好，香软可口。价格与质量相比非常实惠。餐厅氛围如豪华酒店餐厅，有现场音乐伴奏。推荐菜品：柠檬蒸鲈鱼，给10颗星，非常喜欢，用火锅方式上桌，鱼肉新鲜，味道圆润，柠檬香浓，酸辣汁渗入鱼肉内部。</p>
+      <p class="blog-review-author">— 评论来自 น้องถั่วพากิน</p>
+
+      <h4>🧋 塔玛哈拉老爹仙草 ⭐ 3.8 (18条评论)</h4>
+      <p><em>甜品</em></p>
+      <p>店铺位于河边，在塔玛哈拉附近，靠近河畔餐厅。仙草口感弹牙如果冻，嚼劲十足，仙草味道浓郁，带有甜味，但不会太甜。不喜欢普通糖水仙草的顾客也可以选择仙草奶茶或鲜奶仙草。装在方便携带的杯子里，附带勺子，可以边走边吃。</p>
+      <p class="blog-review-author">— 评论来自 Yee_Sunee</p>
+
+      <h4>🦞 Lobster Bucket (BBQ Grilled Cheese) 塔玛哈拉 ⭐ 2.2 (4条评论)</h4>
+      <p><em>快餐，烤肉</em></p>
+      <p>这是一家烤肉蘸芝士餐厅，芝士围绕烤盘上桌。喜欢在美丽环境、良好氛围的河边烤肉的朋友一定不能错过这家位于塔玛哈拉一楼的餐厅。总体来说可以吃2小时，味道好，合口味。这里的炉子可以自己调火，锅热得快，食物熟得快，芝士量足，是一家超棒的河畔餐厅。</p>
+      <p class="blog-review-author">— 评论来自 niki。。。にき</p>
+
+      <h4>🥩 On The Grill (2条评论)</h4>
+      <p><em>烧烤</em></p>
+      <p>餐厅位于塔玛哈拉三楼，不仔细看还不知道有三楼。餐厅是河畔餐厅，可以欣赏河景，微风习习。这里有各种牛排菜单，还有多种饮料可选。牛排味道很好，边吃边聊天边欣赏风景，尤其是傍晚时分，氛围极佳。想在塔玛哈拉找个休闲地方的朋友可以来这里试试。</p>
+      <p class="blog-review-author">— 评论来自 Timmiie Kukiatpaisal</p>
+
+      <h4>☕ Navy Club Coffee ⭐ 3.0 (1条评论)</h4>
+      <p><em>咖啡/茶</em></p>
+      <p>紧邻塔昌，在皇家海军俱乐部内有这家小亭子卖饮料，位于湄南河畔，走进去很容易找到。河边小店出售各种饮料，如咖啡、茶和意大利苏打水。今天我尝试了Navy Blue Soda，是蓝色夏威夷混合苏打水，甜中带酸，不太浓。总体来说是一款味道不错的意大利苏打水。这家店的景色非常美，尤其是傍晚时分更加美丽。</p>
+      <p class="blog-review-author">— 评论来自 Best SiLenZ</p>
+
       <div class="blog-highlight">
         <h4>🌊 氛围</h4>
-        <p>湄南河畔和古老店屋的气息，氛围轻松，适合散步和河边休闲。</p>
+        <p>美丽的湄南河景色，轻松的河畔氛围，适合特别晚餐或傍晚休闲，微风习习，轻柔的现场音乐伴奏。</p>
       </div>
-      
-      <h4>交通</h4>
-      <p>靠近帕占码头，可乘船或公交车前往，河边风景优美。</p>
-      
+
       <div class="blog-references">
         <h4>📚 参考</h4>
         <ul>
-          <li><a href="https://www.thecloud.co.th/tha-phra-chan-memory" target="_blank">The Cloud - ท่าพระจันทร์ในความทรงจำ</a></li>
+          <li>塔玛哈拉-塔昌地区真实用户评论</li>
         </ul>
       </div>
     `,
-    location: 'ท่าพระจันทร์-ท่าช้าง แขวงพระบรมมหาราชวัง เขตพระนคร',
-    locationZh: '塔帕占-塔昌 帕博罗玛哈拉差旺区 帕那空县',
-    mapLink: 'https://maps.google.com/?q=Tha+Phra+Chan+Bangkok'
+    location: 'ท่ามหาราช-ท่าช้าง แขวงพระบรมมหาราชวัง เขตพระนคร',
+    locationZh: '塔玛哈拉-塔昌 帕博罗玛哈拉差旺区 帕那空县',
+    mapLink: 'https://maps.google.com/?q=Tha+Maharaj+Bangkok'
   }
 );
 
@@ -440,7 +480,7 @@ blogsData.push(
     dateZh: '2026年1月2日',
     readTime: '7 min read',
     readTimeZh: '7分钟阅读',
-    image: 'https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=800&q=80',
+    image: 'https://th.airportels.asia/wp-content/uploads/sites/2/2019/11/Padthai-thipsamat.jpg.webp',
     excerpt: 'ย่านที่โด่งดังระดับโลก แต่ยังมีร้านลับที่คนท้องถิ่นชอบไป',
     excerptZh: '世界闻名的街区，但仍有当地人喜欢去的秘密餐厅',
     content: `
@@ -468,6 +508,7 @@ blogsData.push(
         <h4>📚 อ้างอิง</h4>
         <ul>
           <li><a href="https://guide.michelin.com/th/th/bangkok-region/bangkok/restaurants" target="_blank">Michelin Guide Thailand</a></li>
+          <li><a href="https://food.trueid.net/detail/0QQMyDpZDm0" target="_blank">TrueID Food - ประตูผี</a></li>
         </ul>
       </div>
     `,
@@ -515,7 +556,7 @@ blogsData.push(
     dateZh: '2025年12月30日',
     readTime: '6 min read',
     readTimeZh: '6分钟阅读',
-    image: 'https://images.unsplash.com/photo-1563245372-f21724e3856d?w=800&q=80',
+    image: 'https://www.ryoiireview.com/upload/article/201703/1489383862_eb935669c45405844c35aafbd5fe43d7.jpg',
     excerpt: 'เจาะลึกอาหารแนวจีนโบราณที่หาทานยาก',
     excerptZh: '深入探索难得一见的古老中国美食',
     content: `
@@ -543,6 +584,7 @@ blogsData.push(
         <h4>📚 อ้างอิง</h4>
         <ul>
           <li><a href="https://www.creativedistrict.co/charoen-krung-guide" target="_blank">Creative District - Charoen Krung Guide</a></li>
+          <li><a href="https://www.ryoiireview.com/article/taradnoi-review-bkk/" target="_blank">Ryoii Review - ตลาดน้อย</a></li>
         </ul>
       </div>
     `,
@@ -590,7 +632,7 @@ blogsData.push(
     dateZh: '2025年12月28日',
     readTime: '8 min read',
     readTimeZh: '8分钟阅读',
-    image: 'https://images.unsplash.com/photo-1559847844-5315695dadae?w=800&q=80',
+    image: 'https://www.ryoiireview.com/upload/article/201703/1489383862_eb935669c45405844c35aafbd5fe43d7.jpg',
     excerpt: 'ถ้าคุณหิวมื้อดึกตอนตี 2 ที่นี่คือคำตอบ',
     excerptZh: '如果你凌晨2点饿了，这里就是答案',
     content: `
@@ -618,6 +660,7 @@ blogsData.push(
         <h4>📚 อ้างอิง</h4>
         <ul>
           <li><a href="https://travel.trueid.net/huai-khwang-food-guide" target="_blank">Travel.TrueID - พิกัดกินห้วยขวาง</a></li>
+          <li><a href="https://www.instagram.com/p/C3Z-ryRBp-B/" target="_blank">Instagram - ตลาดห้วยขวาง</a></li>
         </ul>
       </div>
     `,
@@ -665,7 +708,7 @@ blogsData.push(
     dateZh: '2025年12月26日',
     readTime: '7 min read',
     readTimeZh: '7分钟阅读',
-    image: 'https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=800&q=80',
+    image: 'https://cms.dmpcdn.com/travel/2020/05/12/0006f5c0-941d-11ea-90c4-73c466dc4865_original.jpg',
     excerpt: 'สวรรค์ของคนรักขนมหวานและของทานเล่นริมน้ำ',
     excerptZh: '甜点和小吃爱好者的河边天堂',
     content: `
@@ -721,6 +764,7 @@ blogsData.push(
         <h4>📚 参考</h4>
         <ul>
           <li><a href="https://www.chillpainai.com/wang-lang-market" target="_blank">Chillpainai - ตะลุยตลาดวังหลัง</a></li>
+          <li><a href="https://travel.trueid.net/detail/zXJX8d74MkY" target="_blank">TrueID Travel - ตลาดวังหลัง</a></li>
         </ul>
       </div>
     `,
@@ -740,7 +784,7 @@ blogsData.push(
     dateZh: '2025年12月24日',
     readTime: '7 min read',
     readTimeZh: '7分钟阅读',
-    image: 'https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=800&q=80',
+    image: 'https://www.ryoiireview.com/upload/article/202311/1700568828_ba4100a48c73280bc0ff256b64ec19c9.jpg',
     excerpt: 'ย่านที่มีเสน่ห์ที่สุดแห่งหนึ่งในกรุงเทพฯ เดินเล่นริมน้ำและหาของกินอร่อย',
     excerptZh: '曼谷最迷人的街区之一，河边散步和寻找美食',
     content: `
@@ -768,6 +812,7 @@ blogsData.push(
         <h4>📚 อ้างอิง</h4>
         <ul>
           <li><a href="https://travel.kapook.com/phra-athit-road" target="_blank">Kapook Travel - เที่ยวถนนพระอาทิตย์</a></li>
+          <li><a href="https://www.ryoiireview.com/article/phra-arthit-road-food/" target="_blank">Ryoii Review - ถนนพระอาทิตย์</a></li>
         </ul>
       </div>
     `,

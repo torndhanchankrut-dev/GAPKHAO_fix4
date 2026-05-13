@@ -324,6 +324,9 @@ function switchLanguage(lang) {
   
   // Update HTML lang attribute
   document.documentElement.lang = lang === 'zh' ? 'zh-CN' : 'th';
+  
+  // Trigger custom event for other scripts to listen to
+  window.dispatchEvent(new CustomEvent('languageChanged', { detail: { language: lang } }));
 }
 
 // Apply translations

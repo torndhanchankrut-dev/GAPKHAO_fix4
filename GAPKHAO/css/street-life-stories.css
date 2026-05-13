@@ -433,3 +433,18 @@
   opacity: 1;
   transform: translateY(0);
 }
+
+/* ── Street Story Card (Voice of the Street) ────────────────────────────────────────── */
+.street-story-card {
+  cursor: pointer !important;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.street-story-card:hover {
+  transform: rotate(0deg) scale(1.05) !important;
+  box-shadow: 5px 5px 20px rgba(0,0,0,0.25);
+}
+
+.street-story-card:active {
+  transform: rotate(0deg) scale(1.02) !important;
+}

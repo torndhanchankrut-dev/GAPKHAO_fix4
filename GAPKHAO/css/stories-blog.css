@@ -502,3 +502,14 @@
 .blog-card-new {
   position: relative;
 }
+
+/* ── Blog Review Author ─────────────────────────────────────── */
+.blog-review-author {
+  font-size: 0.85rem;
+  color: #8B6914;
+  font-style: italic;
+  margin-top: -0.5rem;
+  margin-bottom: 1.5rem;
+  padding-left: 1rem;
+  border-left: 3px solid #D4A574;
+}

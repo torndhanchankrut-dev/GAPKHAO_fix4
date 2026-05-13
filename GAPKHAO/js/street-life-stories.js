@@ -350,9 +350,28 @@ class StoryModal {
 
 // Initialize
 if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', () => { storyModalInstance = new StoryModal(); });
+  document.addEventListener('DOMContentLoaded', () => { 
+    storyModalInstance = new StoryModal();
+    attachCardListeners();
+  });
 } else {
   storyModalInstance = new StoryModal();
+  attachCardListeners();
+}
+
+// Attach click listeners to story cards
+function attachCardListeners() {
+  const cards = document.querySelectorAll('.street-story-card');
+  cards.forEach(card => {
+    card.addEventListener('click', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      const storyId = card.getAttribute('data-story-id');
+      if (storyId) {
+        window.openStory(storyId);
+      }
+    });
+  });
 }
 
 // Global function called by onclick on cards
